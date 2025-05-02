@@ -301,9 +301,18 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
 }
-.mask_bottom {
+
+.questions {
     background-image: url("../images/Mask group_b.png");
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 757px;
+    object-fit: none;
+
+}
+
+.mask_bottom {
+
     height: 700px;
     width: 100%-105px;
     display: flex;
@@ -312,7 +321,6 @@ body {
     justify-content: flex-start;
     gap: 26px;
     padding-top: 50px;
-    padding-left: 105px;
 }
 .question {
     height: 40px;
