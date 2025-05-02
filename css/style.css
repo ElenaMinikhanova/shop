@@ -55,7 +55,7 @@ body {
 }
 
 .about {
-    background-image: url("../images/Mask group.png");
+    background-image: url("../images/Mask group.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -304,7 +304,7 @@ body {
 }
 
 .questions {
-    background-image: url("../images/Mask group_b.png");
+    background-image: url("../images/Mask group_b.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 757px;
