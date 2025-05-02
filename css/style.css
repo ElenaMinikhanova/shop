@@ -10,6 +10,7 @@ body {
 .container {
   max-width: 1240px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -446,12 +447,10 @@ textarea {
 }
 .footer {
     height: 302px;
-    width: 100%-106px;
     background-color: #234118;
     display: flex;
     flex-direction: column;
-    padding-left: 106px;
-    padding-top:22px;
+    justify-content: space-around;
 }
 .footer_link {
     display: flex;
