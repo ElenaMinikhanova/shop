@@ -53,7 +53,6 @@ body {
     align-items: center;
     justify-content: flex-end;
 }
-
 .about {
     background-image: url("../images/Mask group.jpg");
     background-repeat: no-repeat;
@@ -146,9 +145,8 @@ body {
     justify-content: center;
     gap: 16px;
 }
-
-.drawing1 {
-    background-image: url("../images/Mask group (1).png");
+.drawing {
+    border-radius: 10px;
     height: 291px;
     width: 340px;
     display: flex;
@@ -156,86 +154,33 @@ body {
     align-items: flex-start;
     padding-top: 20px;
     padding-right: 20px;
+}
+.drawing1 {
+    background-image: url("../images/Mask group (1).png");
 }
 .drawing2 {
     background-image: url("../images/Mask group (2).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing3 {
     background-image: url("../images/Mask group (3).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing4 {
     background-image: url("../images/Mask group (4).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing5 {
     background-image: url("../images/Mask group (5).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing6 {
     background-image: url("../images/Mask group (6).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing7 {
     background-image: url("../images/Mask group (7).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing8 {
     background-image: url("../images/Mask group (8).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .drawing9 {
     background-image: url("../images/Mask group (9).png");
-    height: 291px;
-    width: 340px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .product {
     display: flex;
@@ -486,10 +431,113 @@ textarea {
     font-weight: 400;
 }
 .color:hover {
-  background-color: #8F9BA3;
-  border-bottom: 1px solid #8F9BA3;
+    background-color: #8F9BA3;
+    border-bottom: 1px solid #8F9BA3;
 }
 .color:active {
-  background-color: #BC5B90;
-  border-bottom: 1px solid #BC5B90;
+    background-color: #BC5B90;
+    border-bottom: 1px solid #BC5B90;
 }
+.img_mob {
+    display: none;
+}
+@media (max-width: 480px){
+    .header_basket {
+        display: none;
+    }
+    .grup_product {
+        display: none;
+  }
+    .header_menu {
+        display: none;
+    }
+    .line {
+        display: none;
+    }
+    .mobil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+    .mask_top {
+        align-items: center;
+        gap: 0px;
+        padding-top: 172px;
+    }
+    .about {
+        background-image: url("../images/Mask group_mob2.jpg");
+        height: 685px;
+    }
+    .div_name {
+        font-size: 40px;
+    }
+    .div_ip {
+        font-size: 32px;
+    }
+    .input_basket {
+        font-size: 18px;
+        height: 44px;
+        width: 288px;
+        margin-top: 59px;
+    }
+    .img_mob {
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+    .header_name {
+        height: 33px;
+        width: 148px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+    .header {
+        height: 80px;
+    }
+    .product_text {
+        font-size: 26px;
+        flex-basis: 261px;
+        line-height: 33px;
+    }
+    .div_today {
+        justify-content: center;
+    }
+    .today {
+        height: 1413px;
+    }
+    .bouquet_name {
+        font-size: 18px;
+    }
+    .cost {
+        font-size: 18px;
+    }
+    .detailed {
+        font-size: 18px;
+        height: 44px;
+        width: 248px;
+    }
+    .detailed1 {
+        display: flex;
+        align-items: flex-start;
+
+    }
+  }
+
+
+
+
+
+
+
