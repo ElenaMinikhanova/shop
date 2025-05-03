@@ -651,6 +651,10 @@ textarea {
         width: 288px;
         padding-left: 10px;
     }
+    textarea {
+        height: 100px;
+        width: 250px;
+    }
     .prob {
         display: inline;
     }
