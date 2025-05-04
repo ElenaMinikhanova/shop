@@ -11,6 +11,7 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   width: 100%;
+  height: 90%;
 }
 
 .header {
@@ -96,14 +97,15 @@ body {
 }
 
 .catalog {
-    background-color: #EAEAEA
+    background-color: #EAEAEA;
+    height: 130%;
 }
 
 .today {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1750px;
+    height: 100%;
 }
 .div_today {
     display: flex;
@@ -520,32 +522,37 @@ textarea {
     .div_today {
         justify-content: center;
     }
+    .section {
+        height: 1700px;
+    }
     .today {
-        height: 1413px;
+        height: 95%;
     }
     .bouquet_name {
-        font-size: 18px;
+        font-size: 23px;
         display: flex;
         justify-content: center;
     }
     .cost {
-        font-size: 18px;
+        font-size: 25px;
         display: flex;
         justify-content: center;
     }
 
     .container {
         max-width: 480px;
+        height: 100%;
     }
     .detailed {
         font-size: 18px;
-        height: 44px;
-        width: 248px;
+        height: 50px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .detailed1 {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -554,41 +561,44 @@ textarea {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100%;
     }
     .product {
-        height: 404px;
-        width: 288px;
+        width: 90%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-    }
-    .drawing {
-        height: 196px;
-        width: 248px;
-        display: flex;
-        margin-top:10px;
-    }
-    .product_info {
-        height: 162px;
-        width: 248px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding-bottom: 15px;
-    }
-    .product_info1 {
-        display: flex;
-        flex-direction: column;
         gap: 6px;
     }
+    .drawing {
+        height: 45%;
+        width: 90%;
+        display: flex;
+    }
+    .product_info {
+        height: 45%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .product_info1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        flex-basis: 60%;
+    }
     .input_hit {
-        font-size: 16px;
-        height: 32px;
-        width: 248px;
+        font-size: 20px;
+        height: 40px;
+        width: 100%;
     }
     .questions {
         background-image: url("../images/Mask group_mob1.jpg");
@@ -611,6 +621,10 @@ textarea {
         align-items: center;
         justify-content: center;
         font-size: 26px;
+    }
+    .catalog {
+        background-color: #EAEAEA;
+        height: 2000px;
     }
     .letter {
         height: 30px;
