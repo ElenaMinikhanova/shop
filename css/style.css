@@ -98,7 +98,7 @@ body {
 
 .catalog {
     background-color: #EAEAEA;
-    height: 135%;
+    height: fit-content;
 }
 
 .today {
@@ -127,7 +127,10 @@ body {
   border-bottom: 1px solid #000;
   flex: 1;
 }
-
+.div_div {
+    height: 60px;
+    background-color: #EAEAEA;
+}
 
 .product {
     height: 477px;
@@ -548,6 +551,7 @@ textarea {
         max-width: 480px;
         height: 100%;
     }
+
     .detailed {
         font-size: 18px;
         height: 60px;
