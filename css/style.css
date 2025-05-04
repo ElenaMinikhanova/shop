@@ -300,6 +300,7 @@ form {
 .input_name {
     border: none;
     background-color: rgba(0, 0, 0, 0);
+    outline: none;
 }
 .label_name {
     color: #FFFDFD;
@@ -332,6 +333,7 @@ form {
 .input_phone {
     border: none;
     background-color: rgba(0, 0, 0, 0);
+    outline: none;
 }
 .label_comment {
     color: #FFFDFD;
@@ -353,6 +355,7 @@ textarea {
     width: 700px;
     border: none;
     background-color: rgba(0, 0, 0, 0);
+    outline: none;
 }
 .label_sogl {
     color: #FFFDFD;
