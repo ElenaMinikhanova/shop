@@ -98,7 +98,7 @@ body {
 
 .catalog {
     background-color: #EAEAEA;
-    height: 130%;
+    height: 135%;
 }
 
 .today {
@@ -112,6 +112,8 @@ body {
     align-items: center;
     height: 135px;
     gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .product_text {
     font-family: "Vetrino";
@@ -149,8 +151,8 @@ body {
 }
 .drawing {
     border-radius: 10px;
-    height: 291px;
-    width: 340px;
+    height: 65%;
+    width: 90%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -193,8 +195,8 @@ body {
     gap: 20px;
 }
 .product_info {
-    height: 106px;
-    width: 360px;
+    height: 23%;
+    width: 90%;
     justify-content: center;
     align-items: center;
 }
@@ -234,8 +236,8 @@ body {
     color: #FFFDFD;
     font-family: "Rubik";
     font-size: 20px;
-    height: 64px;
-    width: 172px;
+    height: 50%;
+    width: 80%;
     border-bottom: 1px solid #78AC47;
     border-radius: 50px;
     background-color: #78AC47;
@@ -248,6 +250,9 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    height: 100%;
+    width: 100%;
+
 }
 
 .questions {
@@ -545,7 +550,7 @@ textarea {
     }
     .detailed {
         font-size: 18px;
-        height: 50px;
+        height: 60px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -554,8 +559,8 @@ textarea {
     .detailed1 {
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-end;
+        flex-basis: 25%;
     }
     .mobil {
         display: flex;
@@ -564,13 +569,13 @@ textarea {
         height: 100%;
     }
     .product {
-        width: 90%;
+        width: 85%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 6px;
+        gap: 15px;
     }
     .drawing {
         height: 45%;
