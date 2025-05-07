@@ -475,9 +475,14 @@ textarea {
 }
 
 
+@media (max-width: 1270px){
+    .product_3 {
+        display: none;
+    }
 
+}
 
-@media (max-width: 480px){
+@media (max-width: 850px){
     .header_basket {
         display: none;
     }
