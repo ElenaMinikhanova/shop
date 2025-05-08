@@ -67,3 +67,13 @@ document.querySelectorAll('.detailed').forEach(button => {
     window.location.href = 'product.html';
   });
 });
+
+// Получаем элементы
+  const checkbox = document.getElementById('subscribe');
+  const submitButton = document.querySelector('.submit');
+
+  // Добавляем обработчик события
+  checkbox.addEventListener('change', function() {
+    // Если чекбокс поставлен галка, активируем кнопку
+    submitButton.disabled = !this.checked;
+  });

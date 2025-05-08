@@ -14,10 +14,10 @@
     height: 90%;
 }
 .header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
 }
 .header_name {
     height: 84px;
@@ -48,7 +48,6 @@
 .nav-menu {
     display: none;
 }
-
 
 .footer {
     height: 302px;
@@ -105,7 +104,7 @@
 }
 
 
-@media (max-width: 1270px){
+@media (max-width: 850px){
     .header {
         height: 80px;
     }
@@ -134,65 +133,55 @@
         display: none;
     }
 
-
-
-
     .logo {
-      display: block;
-      margin-right:15px;
-      cursor: pointer;
-      width: 40px;
-      height: auto;
+        display: block;
+        margin-right:15px;
+        cursor: pointer;
+        width: 40px;
+        height: auto;
     }
-
     .nav-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 250px;
-      background-color: #78AC47;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-      transition: right 0.3s ease-in-out;
-      z-index: 100;
-      border-radius: 10px;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 250px;
+        background-color: #78AC47;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        transition: right 0.3s ease-in-out;
+        z-index: 100;
+        border-radius: 10px;
     }
-
     .nav-menu ul {
-      list-style: none;
-      padding: 20px;
-      margin: 0;
+        list-style: none;
+        padding: 20px;
+        margin: 0;
     }
-
     .nav-menu ul li {
-      margin-bottom: 10px;
+        margin-bottom: 10px;
     }
-
     .nav-menu ul li a {
-      text-decoration: none;
-      color: #FFFFFF;
-      font-size: 25px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 25px;
     }
-
     .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 99;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
     }
-
     .nav-menu.active {
-      display: block;
-      right: 0;
+        display: block;
+        right: 0;
     }
-
     .overlay.active {
-      display: block;
+        display: block;
     }
     li {
         display: block;
@@ -206,8 +195,6 @@
     li:hover {
         background: rgba(255,255,255,.2)
     }
-
-
     .footer {
         height: 146px;
     }

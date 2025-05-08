@@ -95,6 +95,13 @@ body {
     border-bottom: 1px solid #FFFFFF;
     border-radius: 20px;
 }
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 .drawing {
     border-radius: 10px;
     height: 65%;
@@ -132,13 +139,6 @@ body {
 }
 .drawing9 {
     background-image: url("../images/Mask group (9).png");
-}
-.product {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 }
 .product_info {
     height: 23%;
@@ -353,7 +353,11 @@ textarea {
     background-color: #78AC47;
     font-weight: 500;
 }
-
+.submit:disabled {
+    background-color: #78AC47;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
 .img_mob {
     display: none;
 }
@@ -369,14 +373,12 @@ textarea {
     .product_3 {
         display: none;
     }
-
 }
 
 @media (max-width: 850px){
     .grup_product {
         display: none;
-  }
-
+    }
     .line {
         display: none;
     }
@@ -408,7 +410,6 @@ textarea {
         display: flex;
         align-items: center;
     }
-
     .product_text {
         font-size: 26px;
         flex-basis: 261px;
@@ -416,9 +417,7 @@ textarea {
     }
     .div_today {
         justify-content: center;
-    }
-    .section {
-        height: 1700px;
+        width: 100%;
     }
     .today {
         height: 95%;
@@ -448,7 +447,6 @@ textarea {
         align-items: flex-end;
         flex-basis: 25%;
     }
-
     .mobil {
         display: flex;
         flex-direction: column;
@@ -456,8 +454,8 @@ textarea {
         height: 100%;
     }
     .product {
-        width: 85%;
-        height: 100%;
+        height: 650px;
+        width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -465,8 +463,8 @@ textarea {
         gap: 15px;
     }
     .drawing {
-        height: 45%;
-        width: 90%;
+        height: 310px;
+        width: 365px;
         display: flex;
     }
     .product_info {
@@ -514,10 +512,7 @@ textarea {
         justify-content: center;
         font-size: 26px;
     }
-    .catalog {
-        background-color: #EAEAEA;
-        height: 2000px;
-    }
+
     .letter {
         height: 30px;
         width: 200px;
@@ -595,40 +590,6 @@ textarea {
         background-color: #BC5B90;
         border-bottom: 1px solid #BC5B90;
     }
-
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 99;
-    }
-
-    .overlay.active {
-      display: block;
-    }
-    li {
-        display: block;
-        padding: 8px;
-        color: white;
-        font-size: 18px;
-        font-family: "Rubik";
-        text-align: center;
-        text-decoration: none;
-    }
-    li:hover {
-        background: rgba(255,255,255,.2)
-    }
-   }
-
-
-
-
-
-
-
+}
 
 
