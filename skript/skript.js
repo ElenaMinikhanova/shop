@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalImages = 1;
   const folder = 'images/';
 
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= 1000; i++) {
     const className = 'drawing' + i;
     const container = document.querySelector('.' + className);
     if (!container) continue;
@@ -56,4 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+});
+
+document.querySelectorAll('.detailed').forEach(button => {
+  button.addEventListener('click', () => {
+    const productData = JSON.parse(button.getAttribute('data-product'));
+    // Или сохранить в localStorage
+    localStorage.setItem('selectedProduct', JSON.stringify(productData));
+    // Перенаправляем на страницу деталей
+    window.location.href = 'product.html';
+  });
 });
