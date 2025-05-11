@@ -91,6 +91,32 @@ document.getElementById('favoritesPageLink').addEventListener('click', function(
     window.location.href = 'favorites.html';
 });
 
+document.getElementById('favoritesPageLink1').addEventListener('click', function(e) {
+    e.preventDefault(); // отменяем стандартное поведение
+    // Собираем все товары, добавленные в избранное
+    const favorites = [];
+
+    document.querySelectorAll('.product').forEach(function(productDiv) {
+        const detailedBtn = productDiv.querySelector('.detailed');
+        const productData = JSON.parse(detailedBtn.getAttribute('data-product'));
+        const productId = detailedBtn.id;
+        if (localStorage.getItem(productId) === 'true') {
+            // Добавляем товар в список избранных
+            favorites.push({
+                name: productData.name,
+                price: productData.price,
+                image: productData.image
+            });
+        }
+    });
+
+    // Сохраняем избранные товары в localStorage для передачи на страницу favorites.html
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+    // Перенаправляем на страницу favorites.html
+    window.location.href = 'favorites.html';
+});
+
 
 document.querySelectorAll('.detailed').forEach(button => {
   button.addEventListener('click', () => {
