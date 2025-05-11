@@ -454,8 +454,8 @@ textarea {
         height: 100%;
     }
     .product {
-        height: 650px;
-        width: 400px;
+        height: 600px;
+        width: 360px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -463,8 +463,8 @@ textarea {
         gap: 15px;
     }
     .drawing {
-        height: 310px;
-        width: 365px;
+        height: 275px;
+        width: 325px;
         display: flex;
     }
     .product_info {
