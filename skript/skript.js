@@ -107,7 +107,8 @@ document.getElementById('favoritesPageLink1').addEventListener('click', function
             favorites.push({
                 name: productData.name,
                 price: productData.price,
-                image: productData.image
+                image: productData.image,
+                class: productData.class
             });
         }
     });
