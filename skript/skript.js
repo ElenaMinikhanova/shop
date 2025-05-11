@@ -24,39 +24,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-  const totalImages = 1;
-  const folder = 'images/';
-
-  for (let i = 1; i <= 1000; i++) {
-    const className = 'drawing' + i;
-    const container = document.querySelector('.' + className);
-    if (!container) continue;
-
-    const img = container.querySelector('img');
-
-    // Восстановление из localStorage
-    const savedState = localStorage.getItem('state_' + className);
-    if (savedState === 'Vector1') {
-      img.src = folder + 'Vector1.png';
-    } else {
-      img.src = folder + 'Vector.png';
-    }
-
-    // Обработчик клика
-    img.addEventListener('click', () => {
-      if (img.src.includes('Vector.png')) {
-        // Меняем на Vector1.png
-        img.src = folder + 'Vector1.png';
-        localStorage.setItem('state_' + className, 'Vector1');
-      } else {
-        // Меняем обратно на Vector.png
-        img.src = folder + 'Vector.png';
-        localStorage.setItem('state_' + className, 'Vector');
-      }
-    });
-  }
 });
+
+document.querySelectorAll('.drawing img').forEach(function(img) {
+    img.addEventListener('click', function() {
+        const productDiv = img.closest('.product');
+        const productInfo = productDiv.querySelector('.product_info');
+        const detailedBtn = productInfo.querySelector('.detailed');
+        const productData = JSON.parse(detailedBtn.getAttribute('data-product'));
+        const productId = detailedBtn.id;
+
+        // Храним состояние в localStorage по ключу productId
+        let isFavorited = localStorage.getItem(productId) === 'true';
+
+        // Переключаем изображение
+        if (!isFavorited) {
+            img.src = 'images/Vector1.png';
+            localStorage.setItem(productId, 'true');
+        } else {
+            img.src = 'images/Vector.png';
+            localStorage.setItem(productId, 'false');
+        }
+    });
+});
+
+// При загрузке страницы устанавливаем правильное изображение в соответствии с localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.drawing img').forEach(function(img) {
+        const productDiv = img.closest('.product');
+        const detailedBtn = productDiv.querySelector('.detailed');
+        const productId = detailedBtn.id;
+        const favorited = localStorage.getItem(productId) === 'true';
+
+        if (favorited) {
+            img.src = 'images/Vector1.png';
+        } else {
+            img.src = 'images/Vector.png';
+        }
+    });
+});
+
+// Обработчик для кнопки "Избранное"
+document.getElementById('favoritesPageLink').addEventListener('click', function(e) {
+    e.preventDefault(); // отменяем стандартное поведение
+    // Собираем все товары, добавленные в избранное
+    const favorites = [];
+
+    document.querySelectorAll('.product').forEach(function(productDiv) {
+        const detailedBtn = productDiv.querySelector('.detailed');
+        const productData = JSON.parse(detailedBtn.getAttribute('data-product'));
+        const productId = detailedBtn.id;
+        if (localStorage.getItem(productId) === 'true') {
+            // Добавляем товар в список избранных
+            favorites.push({
+                name: productData.name,
+                price: productData.price,
+                image: productData.image
+            });
+        }
+    });
+
+    // Сохраняем избранные товары в localStorage для передачи на страницу favorites.html
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+    // Перенаправляем на страницу favorites.html
+    window.location.href = 'favorites.html';
+});
+
 
 document.querySelectorAll('.detailed').forEach(button => {
   button.addEventListener('click', () => {
