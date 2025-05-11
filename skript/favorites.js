@@ -12,7 +12,6 @@ window.addEventListener('DOMContentLoaded', () => {
         favoritesContainer.innerHTML = '<p>Нет избранных товаров.</p>';
         return;
     }
-
     // Проходим по каждому товару и добавляем его в контейнер
     favorites.forEach(item => {
         const productDiv = document.createElement('div');
