@@ -1,31 +1,54 @@
-window.addEventListener('DOMContentLoaded', () => {
-    // Находим существующий контейнер
-    const favoritesContainer = document.getElementById('favorites-list');
+function renderFavorites() {
+  const container = document.getElementById('favorites-list');
+  container.innerHTML = '';
 
-    // Получаем список избранных товаров из localStorage
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-    // Очищаем содержимое контейнера перед добавлением новых элементов
-    favoritesContainer.innerHTML = '';
+  if (favorites.length === 0) {
+    container.innerHTML = '<p>Нет избранных товаров.</p>';
+    return;
+  }
 
-    if (favorites.length === 0) {
-        favoritesContainer.innerHTML = '<p>Нет избранных товаров.</p>';
-        return;
-    }
-    // Проходим по каждому товару и добавляем его в контейнер
-    favorites.forEach(item => {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'favorite-item';
+  favorites.forEach(fav => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
 
-        productDiv.innerHTML = `
-            <img class="img" src="${item.image}" alt="${item.name}" style="width:100px;height:auto;">
-            <h3>${item.name}</h3>
-            <p class="price">Цена: ${item.price} ₽</p>
-        `;
+    productDiv.innerHTML = `
+      <img class="img" src="${fav.image}" width="150" height="150"/>
+      <h3 >${fav.name}</h3>
+      <p class="price">Цена: ${fav.price} ₽</p>
+      <button class="remove-btn" data-id="${fav.class}">Удалить</button>
+    `;
+    container.appendChild(productDiv);
+  });
 
-        favoritesContainer.appendChild(productDiv);
+  // Назначаем обработчики для кнопок "Удалить"
+  document.querySelectorAll('.remove-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-id');
+      // Получаем текущий массив favorites
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      localStorage.setItem(id, 'false');
+      if (id) {
+        // Удаляем его из массива
+        const index = favorites.indexOf(id);
+        if (index !== -1) {
+          favorites.splice(index, 1);
+          // Обновляем localStorage
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+          console.log('Удалённый товар:', id);
+        }
+      }
+      const productDiv = btn.closest('.product');
+        if (productDiv) {
+          productDiv.remove();
+        }
     });
-});
+  });
+}
+// Изначально показываем список избранных
+renderFavorites();
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

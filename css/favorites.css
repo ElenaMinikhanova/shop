@@ -10,7 +10,7 @@ h1 {
     align-items: flex-start;
     gap: 30px;
 }
-.favorite-item {
+.product {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;

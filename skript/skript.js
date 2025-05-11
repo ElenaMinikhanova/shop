@@ -36,6 +36,7 @@ document.querySelectorAll('.drawing img').forEach(function(img) {
 
         // Храним состояние в localStorage по ключу productId
         let isFavorited = localStorage.getItem(productId) === 'true';
+        console.log(isFavorited);
 
         // Переключаем изображение
         if (!isFavorited) {
@@ -79,7 +80,8 @@ document.getElementById('favoritesPageLink').addEventListener('click', function(
             favorites.push({
                 name: productData.name,
                 price: productData.price,
-                image: productData.image
+                image: productData.image,
+                class: productData.class
             });
         }
     });
